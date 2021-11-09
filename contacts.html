@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Satisfy', cursive;
+        font-weight: bold;
+
+    }
+    .contact{
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url(contact.jpg);
+        opacity: .9;
+        background-size: cover;
+    }
+    .contact .content{
+        max-width: 800px;
+        text-align: center;
+        /* color: white; */
+    }
+    .contact .content h2{
+        margin: 30px;
+        font-size: 56px;
+        text-decoration: underline;
+        font-weight: 1200;
+        color: rgb(45, 47, 168);
+    }
+
+    .contact .content p{
+        
+        font-weight: 800;
+        font-size: 26px;
+        color: rgb(9, 8, 15);
+    }
+
+    .container{
+        width: 100%;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .container .Contact-Info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .Contact-Info .box{
+position: relative;
+padding: 20px 0px;
+display:flex ;
+
+
+    }
+
+    .container .Contact-Info .box .icon{
+        min-width: 60px;
+        height: 60px;
+        background:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20px;
+
+    }
+    .container .Contact-Info .box .text{
+        display: flex;
+        margin-left:20px;
+        font-size: 16px; 
+        color: rgb(250, 250, 249);
+        flex-direction: column;
+        font-weight: 300;
+    }
+
+    .container .Contact-Info .box .text h3{
+        font-weight: 400;
+        color: rgb(252, 193, 1);
+    }
+
+    .contactform{
+        width: 40%;
+        padding: 40px;
+        background:white;
+        border-radius: 20px;
+         
+    }
+
+    .contactform h2{
+        font-size: 30px;
+        color:#333;
+        font-weight: 500;
+    }
+
+    .contactform .inputbox{
+        position: relative;
+        width:100%;
+        margin-top: 10px;
+    }  
+    .contactform .inputbox input,
+    .contactform .inputbox textarea{
+        width: 100%;
+        padding: 5px 0px;
+        font-size: 16px;
+        margin: 10px 0px;
+        border:none;
+        border-bottom: 2px solid black;
+        outline: none;
+        resize: none;
+
+
+    }
+    .contactform .inputbox span{
+        position: absolute;
+        left: 0;
+        padding: 5px 0px;
+        font-size: 16px;
+        margin: 10px 0px;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+    }
+
+    .contactform .inputbox input:focus ~ span,
+    .contactform .inputbox input:valid ~ span,
+    .contactform .inputbox textarea:focus ~ span,
+    .contactform .inputbox textarea:valid ~ span{
+        color:#e91663;
+        font-size: 12px;
+        transform: translateY(-20px);
+    }
+
+    .contactform .inputbox input[type="submit"]
+    {
+        width: 100px;
+        background: #00bcd4;
+        color: white;
+        border:none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+</style>
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top   " style="background-color:rgba(19, 21, 34, 0.568)">
+        <img src="LOGO.png" alt="" height=70px>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse l-3" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" target="blank" href="Rooms1.html">Rooms <span class="sr-only">(current)</span></a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="dining.html">Dining <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="gallery.html">Gallery <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="ami2.html">Amenites <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Offers <span class="sr-only">(current)</span></a>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="meetings_wedding.html">Meetings & Weddings<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Weddings <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="abiut_us.html">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacts.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="feedback.html">Feedback</a>
+            </li>
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+          <div class="mx-2 ">
+            <button class="btn btn-danger mx-2">
+              <a href="Login.html" class="btn-danger">Login / Sign Up</a> 
+              </button>
+            
+          </div>
+        </div>
+      </nav>
+    <section class="contact">
+
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any work from me or any types of quries related to my hotel, you can send me message from here. It's my pleasure to help you.</p>
+        </div>
+
+        <div class="container">
+            <div class="Contact-Info">
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>421, Prince Street<br>Thivim , Goa</p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>xyz@gmail.com <br>abc@gmail.com
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>phone</h3>
+                        <p>9974322885<br>7202927222
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contactform">
+                <form action="">
+                    <h2>Send Message </h2>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email </span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea name="" id=""  required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

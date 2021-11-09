@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="Style.css">
+ <title>SignUp</title>
+ <style>
+ body {
+ background: url("signup.jpg");
+ background-size: cover;
+ }
+ * {
+ box-sizing: border-box;
+ }
+.mainn {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+form {
+margin-top: 20px;
+background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+}
+.container {
+ margin: 5px 50px;
+ padding: 16px;
+}
+ input[type=text], input[type=password] {
+ width: 100%;
+ padding: 15px;
+ margin: 5px 0 22px 0;
+ display: inline-block;
+ border: none;
+ border-radius: 7px;
+ background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+ background-color: #ddd;
+ /* border-radius: 5px; */
+ outline: none;
+}
+hr {
+ border: 1px solid #f1f1f1;
+ margin-bottom: 25px;
+}
+button {
+/* color: white; */
+ background-color: #04AA6D;
+ color: #ffffff;
+ padding: 11px 15px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 100%;
+ opacity: 0.9;
+}
+button:hover {
+ opacity:1;
+}
+ 
+.cancelbtn {
+ padding: 11px 15px;
+ /* border-radius: 9px; */
+ background-color: #f44336;
+}
+.cancelbtn,.signupbtn {
+ float: left;
+ width: 25%;
+ margin: 5px;
+ border-radius: 9px;
+ text-decoration: none;
+ color: rgb(255, 255, 255);
+}
+.clearfix::after {
+ content: "";
+ clear: both;
+ display: table;
+}
+@media screen and (max-width: 300px) {
+ .cancelbtn, .signupbtn {
+ width: 25%;
+ }
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top   " style="background-color:rgba(19, 21, 34, 0.568)">
+        <img src="LOGO.png" alt="" height=70px>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse l-3" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" target="blank" href="Rooms1.html">Rooms <span class="sr-only">(current)</span></a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="dining.html">Dining <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="gallery.html">Gallery <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="ami2.html">Amenites <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Offers <span class="sr-only">(current)</span></a>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="meetings_wedding.html">Meetings & Weddings<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Weddings <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="#">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacts.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="feedback.html">Feedback</a>
+            </li>
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+          <div class="mx-2 ">
+            <button class="btn btn-danger mx-2">
+              <a href="Login.html" class="btn-danger">Login / Sign Up</a> 
+              </button>
+            
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+<div class="mainn">
+<form action="index.php" method="post" style="border:1px solid #ccc">
+ <div class="container">
+ <h1 style="text-align: center;">Sign Up</h1>
+ <p style="text-align: center;">Please fill in this form to create an account.</p>
+ <hr>
+ 
+ <label for="email"><b>Email</b></label>
+ <input type="text" placeholder="Enter Email" name="email" required>
+ 
+ <label for="psw"><b>Password</b></label>
+ <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+ <label for="psw-repeat"><b>Repeat Password</b></label>
+ <input type="password" placeholder="Repeat Password" name="pswrepeat" required>
+ 
+ <label>
+ <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+ </label>
+ 
+ <p>By creating an account you agree to our <a href="pdf/Bookings Terms & Co
+nditions.pdf" target="blank" style="color:dodgerblue">Terms & Privacy</a>.</p>
+ 
+ <div class="clearfix">
+ <button type="button" class="cancelbtn">Cancel</button>
+ <button type="submit" class="signupbtn">
+     Sign UP
+     </button>
+ </div>
+ </div>
+ </form>
+</div>
+ 
+</body>
+</html

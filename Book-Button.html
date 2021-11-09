@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="book-button-style.css">
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top   " style="background-color:rgba(19, 21, 34, 0.568)">
+      <img src="LOGO.png" alt="" height=70px>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse l-3" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item active">
+            <a class="nav-link text-light" target="blank" href="Rooms1.html">Rooms <span class="sr-only">(current)</span></a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+          
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="dining.html">Dining <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="gallery.html">Gallery <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="ami2.html">Amenites <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item active">
+            <a class="nav-link text-light" href="#">Offers <span class="sr-only">(current)</span></a>
+          </li> -->
+          
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="meetings_wedding.html">Meetings & Weddings<span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item active">
+            <a class="nav-link text-light" href="#">Weddings <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item active">
+            <a class="nav-link text-light" href="#">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="contacts.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="feedback.html">Feedback</a>
+          </li>
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <div class="mx-2 ">
+          <button class="btn btn-danger mx-2">
+            <a href="Login.html" class="btn-danger">Login / Sign Up</a> 
+            </button>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="book_main">
+        <form action="" method="post">
+            <h1 class="h1book">Book Your Room</h1>
+            <p>Name* :
+            <div class="name"><input type="text" name="fname" id="fname" plac eholder="First Name" required> <input
+                    type="text" name="lname" id="lname" placeho lder="Last Name" required>
+            </div>
+            </p>
+            <p>Email* : <input type="email" name="email" id="email" placeholder="
+example@example.com" required></p>
+            <p>Room Type* :
+                <select name="roomtype" id="roomtype">
+                    <option value=""> Please Select </option>
+                    <option value="Deluxe Room">Deluxe Room</option>
+                    <option value="Luxury Room">Luxury Room</option>
+                    <option value="Superior Room">Superior Room</option>
+                    <option value="Classic Room">Classic Room</option>
+                    <option value="Family Room">Family Room</option>
+                    <option value="Suite Room">Suite Room</option>
+                </select>
+            </p>
+            <p>No of Rooms* : <input type="number" name="noofrooms" id="noofrooms
+"> </p>
+            <p>No of Adults* : <input type="number" name="noofadults" id="noofadu
+lts"> </p>
+            <p>No of Children* : <input type="number" name="noofchildren" id="noo
+fchildren"> </p>
+            <p>Check In Date* :
+                <select name="checkinday" id="checkinday">
+                    <option>Day</option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12"> 12 </option>
+                    <option value="13"> 13 </option>
+                    <option value="14"> 14 </option>
+                    <option value="15"> 15 </option>
+                    <option value="16"> 16 </option>
+                    <option value="17"> 17 </option>
+                    <option value="18"> 18 </option>
+                    <option value="19"> 19 </option>
+                    <option value="20"> 20 </option>
+                    <option value="21"> 21 </option>
+                    <option value="22"> 22 </option>
+                    <option value="23"> 23 </option>
+                    <option value="24"> 24 </option>
+                    <option value="25"> 25 </option>
+                    <option value="26"> 26 </option>
+                    <option value="27"> 27 </option>
+                    <option value="28"> 28 </option>
+                    <option value="29"> 29 </option>
+                    <option value="30"> 30 </option>
+                    <option value="31"> 31 </option>
+                </select>
+                <select name="checkinmonth" id="checkinmonth">
+                    <option>Month</option>
+                    <option value="January"> January </option>
+                    <option value="February"> February </option>
+                    <option value="March"> March </option>
+                    <option value="April"> April </option>
+                    <option value="May"> May </option>
+                    <option value="June"> June </option>
+                    <option value="July"> July </option>
+                    <option value="August"> August </option>
+                    <option value="September"> September </option>
+                    <option value="October"> October </option>
+                    <option value="November"> November </option>
+                    <option value="December"> December </option>
+                </select>
+                <select name="checkinyear" id="checkinyear">
+                    <option>Year</option>
+                    <option value="2021"> 2021 </option>
+                    <option value="2020"> 2020 </option>
+                    <option value="2019"> 2019 </option>
+                    <option value="2018"> 2018 </option>
+                    <option value="2017"> 2017 </option>
+                    <option value="2016"> 2016 </option>
+                    <option value="2015"> 2015 </option>
+                    <option value="2014"> 2014 </option>
+                    <option value="2013"> 2013 </option>
+                    <option value="2012"> 2012 </option>
+                    <option value="2011"> 2011 </option>
+                    <option value="2010"> 2010 </option>
+                    <option value="2009"> 2009 </option>
+                    <option value="2008"> 2008 </option>
+                    <option value="2007"> 2007 </option>
+                    <option value="2006"> 2006 </option>
+                    <option value="2005"> 2005 </option>
+                    <option value="2004"> 2004 </option>
+                    <option value="2003"> 2003 </option>
+                    <option value="2002"> 2002 </option>
+                    <option value="2001"> 2001 </option>
+                    <option value="2000"> 2000 </option>
+                </select>
+            </p>
+            <p>Check Out Date* :
+                <select name="checkoutday" id="checkoutnday">
+                    <option>Day</option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12"> 12 </option>
+                    <option value="13"> 13 </option>
+                    <option value="14"> 14 </option>
+                    <option value="15"> 15 </option>
+                    <option value="16"> 16 </option>
+                    <option value="17"> 17 </option>
+                    <option value="18"> 18 </option>
+                    <option value="19"> 19 </option>
+                    <option value="20"> 20 </option>
+                    <option value="21"> 21 </option>
+                    <option value="22"> 22 </option>
+                    <option value="23"> 23 </option>
+                    <option value="24"> 24 </option>
+                    <option value="25"> 25 </option>
+                    <option value="26"> 26 </option>
+                    <option value="27"> 27 </option>
+                    <option value="28"> 28 </option>
+                    <option value="29"> 29 </option>
+                    <option value="30"> 30 </option>
+                    <option value="31"> 31 </option>
+                </select>
+                <select name="checkoutmonth" id="checkoutmonth">
+                    <option>Month</option>
+                    <option value="January"> January </option>
+                    <option value="February"> February </option>
+                    <option value="March"> March </option>
+                    <option value="April"> April </option>
+                    <option value="May"> May </option>
+                    <option value="June"> June </option>
+                    <option value="July"> July </option>
+                    <option value="August"> August </option>
+                    <option value="September"> September </option>
+                    <option value="October"> October </option>
+                    <option value="November"> November </option>
+                    <option value="December"> December </option>
+                </select>
+                <select name="checkoutyear" id="checkoutyear">
+                    <option>Year</option>
+                    <option value="2021"> 2021 </option>
+                    <option value="2020"> 2020 </option>
+                    <option value="2019"> 2019 </option>
+                    <option value="2018"> 2018 </option>
+                    <option value="2017"> 2017 </option>
+                    <option value="2016"> 2016 </option>
+                    <option value="2015"> 2015 </option>
+                    <option value="2014"> 2014 </option>
+                    <option value="2013"> 2013 </option>
+                    <option value="2012"> 2012 </option>
+                    <option value="2011"> 2011 </option>
+                    <option value="2010"> 2010 </option>
+                    <option value="2009"> 2009 </option>
+                    <option value="2008"> 2008 </option>
+                    <option value="2007"> 2007 </option>
+                    <option value="2006"> 2006 </option>
+                    <option value="2005"> 2005 </option>
+                    <option value="2004"> 2004 </option>
+                    <option value="2003"> 2003 </option>
+                    <option value="2002"> 2002 </option>
+                    <option value="2001"> 2001 </option>
+                    <option value="2000"> 2000 </option>
+                </select>
+            </p>
+            <fieldset>
+                <legend>Free Pickup* : </legend>
+                <p>
+                    Yes Please!<input type="radio" name="pickup" id="yes" require d>
+                    No Thanks<input type="radio" name="pickup" id="no" required>
+                </p>
+            </fieldset>
+            <p>Upload RT-PCR negative report not older than 72 hours
+                <br>In case of very advance booking report will be required at Ch
+                eckIn<br>
+                <input type="file" name="rtpcr" id="rtpcr">
+            </p>
+            <p>Special Requirements? : <br><br><textarea name="address" id="addre
+ss" cols="100" rows="8"></textarea></p>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

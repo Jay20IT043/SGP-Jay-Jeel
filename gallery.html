@@ -1,0 +1,415 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="Style.css">
+    <title>Gallery</title>
+    <style>
+    body {
+    background-color: rgba(0, 0, 0, 0.911);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 40px 0;
+}
+*{
+    font-family: 'Satisfy',cursive;
+}
+.container.gallery-container {
+    background-color: black;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Satisfy',cursive;
+    font-weight: bold;
+    color: gold;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: coral;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(46, 132, 206, 0.7);
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top   " style="background-color:rgba(19, 21, 34, 0.568)">
+        <img src="LOGO.png" alt="" height=70px>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse l-3" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" target="blank" href="Rooms1.html">Rooms <span class="sr-only">(current)</span></a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="dining.html">Dining <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="gallery.html">Gallery <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="ami2.html">Amenites <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Offers <span class="sr-only">(current)</span></a>
+            </li> -->
+            
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="meetings_wedding.html">Meetings & Weddings<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item active">
+              <a class="nav-link text-light" href="#">Weddings <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="abiut_us.html">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacts.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="feedback.html">Feedback</a>
+            </li>
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+          <div class="mx-2 ">
+            <button class="btn btn-danger mx-2">
+              <a href="Login.html" class="btn-danger">Login / Sign Up</a> 
+              </button>
+            
+          </div>
+        </div>
+      </nav>
+<div class="container gallery-container">
+
+    <h1>Hotel Views</h1>
+
+    <p class="page-description text-center">Lorem Ipsum Dollar sit amit</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsJTIwcmVjZXB0aW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGhvdGVsJTIwcmVjZXB0aW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjBsb2JieXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWwlMjBsb2JieXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/1755288/pexels-photo-1755288.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/1755288/pexels-photo-1755288.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Coast">
+                </a>
+            </div> 
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/6474588/pexels-photo-6474588.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/6474588/pexels-photo-6474588.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Rails">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container gallery-container">
+
+    <h1>Rooms</h1>
+
+    <p class="page-description text-center">Lorem Ipsum Doller Sit Amit</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-luxe-suite-6833-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-luxe-suite-6833-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-bathroom-6841-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-bathroom-6841-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/rails.jpg">
+                    <img src="https://images.unsplash.com/photo-1601565415267-724db0e9fbdf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGhvdGVsJTIwcm9vbXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Coast">
+                </a>
+            </div> 
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-luxe-suite-6831-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px" alt="Rails">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container gallery-container">
+
+    <h1>Recreation & Fitness</h1>
+
+    <p class="page-description text-center">Lorem Ipsum Dollar Sit Amit</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1562805791-dbca2a22bba2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmVzb3J0JTIwc3dpbW1pbmclMjBwb29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1562805791-dbca2a22bba2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmVzb3J0JTIwc3dpbW1pbmclMjBwb29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1632051409054-3438ef7b4ba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHJlc29ydCUyMHN3aW1taW5nJTIwcG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1632051409054-3438ef7b4ba0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHJlc29ydCUyMHN3aW1taW5nJTIwcG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://images.pexels.com/photos/4046704/pexels-photo-4046704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/4046704/pexels-photo-4046704.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Coast">
+                </a>
+            </div> 
+            <!-- <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg">
+                    <img src="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg" alt="Rails">
+                </a>
+            </div>  -->
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container gallery-container">
+
+    <h1>Dining</h1>
+
+    <p class="page-description text-center">Lorem Ipsum Dollar Sit Amit</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/3201921/pexels-photo-3201921.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/3201921/pexels-photo-3201921.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/2736387/pexels-photo-2736387.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/2736387/pexels-photo-2736387.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1557499305-0af888c3d8ec?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGhvdGVsJTIwZGluaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1557499305-0af888c3d8ec?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGhvdGVsJTIwZGluaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Coast">
+                </a>
+            </div> 
+            <!-- <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg">
+                    <img src="https://raw.githubusercontent.com/LeshikJanz/libraries/master/Related%20images/Bootstrap%20example/coast.jpg" alt="Rails">
+                </a>
+            </div> -->
+
+        </div>
+
+    </div>
+
+</div>
+<div class="container gallery-container">
+
+    <h1>Mettings and Weddings</h1>
+
+    <p class="page-description text-center">Lorem Ipsum Dollar Sit Amit</p>
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-boardroom-6816-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-boardroom-6816-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px" alt="Park">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-riverside-lawn-6847-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/STVMC/stvmc-riverside-lawn-6847-hor-clsc.jpg?interpolation=progressive-bilinear&downsize=*:512px" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlZGRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlZGRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Traffic">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.pexels.com/photos/159806/meeting-modern-room-conference-159806.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                    <img src="https://images.pexels.com/photos/159806/meeting-modern-room-conference-159806.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Coast">
+                </a>
+            </div> 
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="https://images.unsplash.com/photo-1542665952-14513db15293?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmFucXVldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                    <img src="https://images.unsplash.com/photo-1542665952-14513db15293?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmFucXVldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Rails">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script> -->
+</body>
+</html>
