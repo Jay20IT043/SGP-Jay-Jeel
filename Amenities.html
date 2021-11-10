@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+        }
+        .cards-list {
+  z-index: 0;
+  width: 100%;
+  display:flex;
+  
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
+}
+
+.card {
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 150px;
+}
+.cards h1{
+    color: gold;
+    position: fixed;
+    font-family: 'Satisfy',cursive;
+  font-weight: bold;
+  font-size: 30px;
+  align-items: center;
+  margin-left: 520px;
+}
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: 'Satisfy',cursive;
+  font-weight: bold;
+  font-size: 30px;
+  color: gold;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+    </style>
+</head>
+<body>
+    
+    <div class="cards">
+        <h1>AMENITIES</h1>
+    <div class="card 1">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" /> </div>
+        <div class="card_title title-white">
+          <p>Gym</p>
+        </div>
+      </div>
+      <div class="card 2">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1530945564459-9cf30d0bf77a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGFya2luZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" /> </div>
+        <div class="card_title title-white">
+          <p>Free Parking</p>
+        </div>
+      </div>
+      <div class="card 3">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1551491603-7d38b9e605f5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN3aW1taW5nJTIwcG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" /> </div>
+        <div class="card_title title-white">
+          <p>Swimming Pool</p>
+        </div>
+      </div>
+      <div class="card 4">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1574538298279-26973f60efa3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bGF1bmRyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" /> </div>
+        <div class="card_title title-white">
+          <p>Laundry service</p>
+        </div>
+      </div>
+      <div class="card 5">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1483861911361-57d334ad765b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" /> </div>
+        <div class="card_title title-white">
+          <p>Safety Lockers</p>
+        </div>
+      </div>
+      <div class="card 6">
+        <div class="card_image"> <img src="https://images.pexels.com/photos/6152255/pexels-photo-6152255.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" /> </div>
+        <div class="card_title title-white">
+          <p>Tea maker</p>
+        </div>
+      </div>
+      <div class="card 7">
+        <div class="card_image"> <img src="https://images.pexels.com/photos/2781538/pexels-photo-2781538.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" /> </div>
+        <div class="card_title title-white">
+          <p>Daily Newspaper</p>
+        </div>
+      </div>
+      <div class="card 8">
+        <div class="card_image"> <img src="https://media.istockphoto.com/photos/taxi-picture-id519870714?b=1&k=20&m=519870714&s=170667a&w=0&h=n6BhLGwnTiyizL85ibO-7dPWMpCzNOzWyiN_gh_UwY8=" /> </div>
+        <div class="card_title title-white">
+          <p>Cab</p>
+        </div>
+      </div>
+      <div class="card 9">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1572085313466-6710de8d7ba3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2FyZGVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" /> </div>
+        <div class="card_title title-white">
+          <p>Spacious garden</p>
+        </div>
+      </div>
+      <div class="card 10">
+        <div class="card_image"> <img src="https://media.istockphoto.com/photos/hand-making-cocktail-picture-id1251676492?b=1&k=20&m=1251676492&s=170667a&w=0&h=xP4Adq7qtI6YJfu6JNE33yBAL8kiCfSKZBEx9liCx00=" /> </div>
+        <div class="card_title title-white">
+          <p>Bar</p>
+        </div>
+      </div>
+      <div class="card 11">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80" /> </div>
+        <div class="card_title title-white">
+          <p>Spa</p>
+        </div>
+      </div>
+      <div class="card 12">
+        <div class="card_image"> <img src="https://media.istockphoto.com/photos/indian-ocean-shore-sri-lanka-picture-id492217366?b=1&k=20&m=492217366&s=170667a&w=0&h=Vo62q-mBUPEQlZCP7qhGMzrcOlMoB3sOqRUryr2e6no=" /> </div>
+        <div class="card_title title-white">
+          <p>Ocean View</p>
+        </div>
+      </div>
+      <div class="card 13">
+        <div class="card_image"> <img src="https://media.istockphoto.com/photos/connect-to-wifi-wireless-internet-network-with-smartphone-at-coffee-picture-id1146115827?b=1&k=20&m=1146115827&s=170667a&w=0&h=OnXrccJNx_ETw56JnR80FLmaHW6exT1gxr54sDwDQO8=" /> </div>
+        <div class="card_title title-white">
+          <p>Free Wi-Fi</p>
+        </div>
+      </div>
+      <div class="card 14">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1549371633-027efbbb083a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" /> </div>
+        <div class="card_title title-white">
+          <p>Game Zone</p>
+        </div>
+      </div>
+      <div class="card 15">
+        <div class="card_image"> <img src="https://media.istockphoto.com/photos/motorboat-picture-id157693170?b=1&k=20&m=157693170&s=170667a&w=0&h=t1lqT-NgnOmh4qIkbyE8DK7ha8Y_QsgFHIKqJCcScBw=" /> </div>
+        <div class="card_title title-white">
+          <p>Yacht</p>
+        </div>
+      </div>
+      <div class="card 16">
+        <div class="card_image"> <img src="https://images.unsplash.com/photo-1586893079425-9285c7fd5dc1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" /> </div>
+        <div class="card_title title-white">
+          <p>Disco</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
